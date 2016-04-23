@@ -15,6 +15,8 @@ uglify = {
     src: [
       'assets/js/libs/jquery-1.12.3.min.js',
       'assets/js/libs/bootstrap.min.js',
+      'assets/js/libs/highlight.pack.js',
+      'assets/js/main.js',
     ],
     dest: 'public/js/main.min.js'
   },

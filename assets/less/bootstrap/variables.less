@@ -8,11 +8,11 @@
 //## Gray and brand colors for use across Bootstrap.
 
 @gray-base:              #7C8487;
-@gray-darker:            darken(@gray-base, 20);
+@gray-darker:            darken(@gray-base, 20%);
 @gray-dark:              darken(@gray-base, 10%);
-@gray:                   lighten(@gray-base, 33.5%);
-@gray-light:             lighten(@gray-base, 36.7%);
-@gray-lighter:           lighten(@gray-base, 40.5%);
+@gray:                   lighten(@gray-base, 20%);
+@gray-light:             lighten(@gray-base, 30%);
+@gray-lighter:           lighten(@gray-base, 45%);
 
 @brand-primary:         #0073A1;
 @brand-primary-darker:  #00456E;
@@ -146,9 +146,9 @@
 
 @btn-font-weight:                normal;
 
-@btn-default-color:              #fff;
+@btn-default-color:              @gray-base;
 @btn-default-bg:                 transparent;
-@btn-default-border:             @brand-success;
+@btn-default-border:             @gray-light;
 
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
@@ -188,9 +188,9 @@
 @input-bg-disabled:              @gray-lighter;
 
 //** Text color for `<input>`s
-@input-color:                    #fff;
+@input-color:                    @gray-base;
 //** `<input>` border color
-@input-border:                   @brand-success;
+@input-border:                   @gray-light;
 
 // TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -202,10 +202,10 @@
 @input-border-radius-small:      @border-radius-small;
 
 //** Border color for inputs on focus
-@input-border-focus:             @brand-success;
+@input-border-focus:             @gray;
 
 //** Placeholder text color
-@input-color-placeholder:        opacity(#fff,0.8);
+@input-color-placeholder:        @gray-light;
 
 //** Default `.form-control` height
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
@@ -236,11 +236,11 @@
 //** Background for the dropdown menu.
 @dropdown-bg:                    #fff;
 //** Dropdown menu `border-color`.
-@dropdown-border:                rgba(0,0,0,.15);
+@dropdown-border:                transparent;
 //** Dropdown menu `border-color` **for IE8**.
 @dropdown-fallback-border:       transparent;
 //** Divider color for between dropdown items.
-@dropdown-divider-bg:            @gray-light;
+@dropdown-divider-bg:            @gray-lighter;
 
 //** Dropdown link text color.
 @dropdown-link-color:            @brand-primary;
@@ -366,7 +366,7 @@
 
 @navbar-default-color:             #777;
 @navbar-default-bg:                #f8f8f8;
-@navbar-default-border:            none;
+@navbar-default-border:            transparent;
 
 // Navbar links
 @navbar-default-link-color:                #777;
@@ -385,14 +385,14 @@
 // Navbar toggle
 @navbar-default-toggle-hover-bg:           #ddd;
 @navbar-default-toggle-icon-bar-bg:        #888;
-@navbar-default-toggle-border-color:       none;
+@navbar-default-toggle-border-color:       transparent;
 
 
 //=== Inverted navbar
 // Reset inverted navbar basics
 @navbar-inverse-color:                      lighten(@gray-light, 15%);
 @navbar-inverse-bg:                         @brand-primary;
-@navbar-inverse-border:                     none;
+@navbar-inverse-border:                     transparent;
 
 // Inverted navbar links
 @navbar-inverse-link-color:                 lighten(@gray-light, 15%);
@@ -411,7 +411,7 @@
 // Inverted navbar toggle
 @navbar-inverse-toggle-hover-bg:            transparent;
 @navbar-inverse-toggle-icon-bar-bg:         #fff;
-@navbar-inverse-toggle-border-color:        none;
+@navbar-inverse-toggle-border-color:        transparent;
 
 
 //== Navs
