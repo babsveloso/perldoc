@@ -1,0 +1,130 @@
+@import "bootstrap/bootstrap.less";
+@import "same-size-columns.less";
+
+@letter-spacing-base: 0.13em;
+@font-size-smaller: 10px;
+
+/* Text Styles */
+h1,
+.jumbotron h1 {
+  font-weight: 300;
+  color: @brand-primary;
+}
+h2 {
+  font-weight: 700;
+  color: @brand-primary;
+}
+h3 {
+  font-weight: 700;
+  color: @brand-primary;
+  display: inline-block;
+  padding: @padding-small-vertical;
+  border-bottom: 2px solid @brand-success;
+}
+h3.alternate {
+  font-weight: 500;
+  color: @brand-primary-darker;
+  display: inline-block;
+  padding: @padding-small-vertical;
+  border-bottom: none;
+}
+h4 {
+  font-weight: 700;
+  color: @gray-darker;
+}
+
+/* Navbar */
+.navbar-inverse {
+  #gradient .vertical(@brand-primary; @brand-primary-darker; 0%; 100%);
+}
+.navbar-brand {
+  padding-top: 0;
+}
+.navbar-nav {
+  margin-top: 18px;
+  margin-left: 0;
+}
+.navbar-right {
+  margin-right: 0;
+}
+.navbar-nav>li>a.btn {
+  padding: @padding-large-vertical @padding-large-horizontal;
+}
+
+
+/* Buttons and Dropdowns */
+.btn {
+  text-transform: uppercase;
+  letter-spacing: @letter-spacing-base;
+  padding: @padding-large-vertical @padding-large-horizontal;
+}
+.btn-ic {
+  margin-right: 20px;
+}
+.btn:hover,
+.btn:focus,
+.btn:active,
+.dropdown-toggle {
+  box-shadow: none !important;
+}
+.btn .caret {
+  margin-left: 6px;
+}
+
+/* Jumbotron */
+.jumbotron {
+  margin-top: @navbar-height;
+  h1 {
+    margin-top: 10px;
+  }
+}
+
+/* Highlight module */
+.highlight-module {
+  background: @brand-primary;
+  padding: @padding-large-vertical @padding-large-horizontal;
+  border-radius: @border-radius-large;
+  color: #fff;
+  &:hover {
+    color: #fff;
+    background: fade(@brand-primary, 90%);
+  }
+  p {
+    margin-top: 20px;
+  }
+  .ic-highlight {
+    position: absolute;
+    right: 30px;
+    top: 0;
+  }
+}
+
+
+/* Footer */
+.footer {
+  padding: 40px;
+  background-color: @gray-lighter;
+  margin-top: @jumbotron-padding;
+}
+
+
+@media (max-width: @screen-sm-min) {
+  .navbar {
+    .dropdown-toggle {
+      .caret {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+    }
+  }
+  .footer {
+    text-align: center;
+    li {
+      padding: @padding-base-vertical @padding-base-horizontal;
+    }
+  }
+  .highlight-module {
+    margin-bottom: 20px;
+  }
+}
