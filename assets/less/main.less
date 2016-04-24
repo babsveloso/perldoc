@@ -57,6 +57,9 @@ h4 {
 .navbar-right {
   margin-right: 0;
 }
+.navbar-nav>li {
+  margin-right: 4px;
+}
 .navbar-nav>li>a.btn {
   padding: @padding-large-vertical @padding-large-horizontal;
 }
@@ -144,6 +147,9 @@ h4 {
 .content {
   padding: 0 20px 100px;
   overflow: scroll;
+  &-container {
+    max-width: 500px;
+  }
   h3 {
     display: block;
   }
@@ -200,6 +206,11 @@ span.highlight {
       }
     }
   }
+  .navbar-nav>li>a.btn,
+  .navbar-nav>li>a.btn:hover,
+  .navbar-nav>li>a.btn:focus {
+    border-color: transparent !important;
+  }
   .footer {
     text-align: center;
     li {
@@ -221,5 +232,8 @@ span.highlight {
   .showSidebar {
     position: relative;
     left: 0;
+  }
+  .content-container {
+    max-width: none;
   }
 }
