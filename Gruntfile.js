@@ -18,7 +18,6 @@ module.exports = function(grunt) {
     'grunt-contrib-uglify',
     'grunt-contrib-less',
     'grunt-contrib-watch',
-    'grunt-newer'
   ].forEach( grunt.loadNpmTasks );
 
   // Tasks
